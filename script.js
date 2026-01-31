@@ -1,18 +1,36 @@
-fetch("./data.json")
-.then(response => {let data = response.json()})
-console.log(data)
-const max = content.length;
+let content = [];
+let max_mid = 0;
+let max_1 = 0;
+
+fetch("https://raw.githubusercontent.com/Hubblle/appreciation/refs/heads/main/data.json")
+.then(response => response.json())
+.then(data => {
+    content = data;
+    max_mid = content["5"]["mid"].length;
+    max_1 = content["5"]["1"].length;
+    console.log(content);
+})
+
 
 function phrase(n) {
     let ph="";
+    // Random phrase no1
+    let randint = Math.floor(Math.random() * max_1);
+    ph += content["5"]["1"][randint]+" ";
 
-    for(let i=0; i < n; i++) {
-        let randint = Math.floor(Math.random() * max)
+    for(let i=0; i <= n; i++) {
 
-        ph += content[randint]+" "
+        if(i++ == n){
+            randint = Math.floor(Math.random() * max_mid);
+            ph += content["5"]["mid"][randint]+".";
+            break;
+        }
+
+        randint = Math.floor(Math.random() * max_mid);
+        ph += content["5"]["mid"][randint].charAt(0).toUpperCase()+content["5"]["mid"][randint].slice(1)+", ";
 
     }
 
-    document.getElementById("test").innerText = ph
+    document.getElementById("test").innerText = ph;
 
 }
