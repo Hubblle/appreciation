@@ -13,6 +13,7 @@ fetch("https://raw.githubusercontent.com/Hubblle/appreciation/refs/heads/main/da
 
 
 function phrase(n) {
+    // Function which generate the phrases using the provided data, with n parts in second phrase
     let ph="";
     // Random phrase no1
     let randint = Math.floor(Math.random() * max_1);
@@ -32,5 +33,13 @@ function phrase(n) {
     }
 
     document.getElementById("test").innerText = ph;
+
+}
+
+function copy() {
+    // Function to copy the generated phrases
+    let element = document.getElementById("test");
+    navigator.clipboard.writeText(element.innerText)
+    alert("Texte copié: "+element.innerText)
 
 }
