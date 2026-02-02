@@ -1,5 +1,5 @@
 {
-    "5":{
+    "3":{
         "1":[
             "Un très bon trimestre !",
             "Excellent trimestre, bravo !",
@@ -10,8 +10,30 @@
             "vos efforts se font ressentir",
             "votre sérieux en classe est remarquable",
             "votre calme apporte un vrai bonus a votre travail",
-            "vous savez faire preuve de sérieux et montrer vos capacités"
+            "vous savez faire preuve de sérieux et montrer vos capacités",
+            "continuez ainsi au prochain semestre",
+            "votre participation est toujours pertinente",
+            "vous interventions orales sont toujours d'une grande qualité",
+            "vos copies présentes des idées intéressantes"
         ]
 
+    },
+    "2":{
+        "1":[
+            "test 2"
+
+        ],
+        "mid":[
+            "test 2 mid"
+        ]
+    },
+    "1":{
+        "1":[
+            "test 1"
+
+        ],
+        "mid":[
+            "test mid 1"
+        ]
     }
 }
